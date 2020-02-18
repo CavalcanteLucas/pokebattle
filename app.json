@@ -3,7 +3,8 @@
   "description": "Pokebattle Heroku app.",
   "env": {
     "ALLOWED_HOSTS": {
-      "description": "Django ALLOWED_HOSTS setting, e.g.: .appname.herokuapp.com"
+      "description": "Django ALLOWED_HOSTS setting, e.g.: .appname.herokuapp.com",
+      "value": "pokebat.herokuapp.com"
     },
     "DISABLE_COLLECTSTATIC": {
       "description": "Disables Heroku collectstatic",
@@ -60,10 +61,10 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku/nodejs"
+      "url": "heroku/python"
     },
     {
-      "url": "heroku/python"
+      "url": "heroku/nodejs"
     }
   ]
 }
