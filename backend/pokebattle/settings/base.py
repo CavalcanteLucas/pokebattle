@@ -107,5 +107,5 @@ CELERY_RESULT_SERIALIZER = "json"
 CELERY_ACKS_LATE = True
 
 # Sentry
-SENTRY_DSN = config("SENTRY_DSN", default="")
+SENTRY_DSN = config("SENTRY_DSN", default="https://3f7b02fa6ff14d3eb856a680e77695e6@sentry.io/2686701")
 COMMIT_SHA = config("HEROKU_SLUG_COMMIT", default="")
