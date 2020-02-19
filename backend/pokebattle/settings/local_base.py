@@ -6,7 +6,7 @@ DEBUG = True
 
 HOST = "http://localhost:8000"
 
-with open('credentials.json') as json_data:
+with open('/home/lucas/code/vinta/pokebattle/backend/pokebattle/settings/credentials.json') as json_data:
     credentials = json.load(json_data)
 
 SECRET_KEY = credentials['password']
