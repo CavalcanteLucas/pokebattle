@@ -1,15 +1,23 @@
 from .base import *  # noqa
 
 import json
+import os
+import sys
 
 DEBUG = True
 
 HOST = "http://localhost:8000"
 
-with open('/home/lucas/code/vinta/pokebattle/backend/pokebattle/settings/credentials.json') as json_data:
+print(sys.path)
+
+
+
+with open(os.path.join(sys.path[0], 'backend/pokebattle/settings/credentials.json'), 'r') as json_data:
     credentials = json.load(json_data)
 
 SECRET_KEY = credentials['password']
+
+# SECRET_KEY = "floatyourboat"
 
 DATABASES = {
     "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": base_dir_join("db.sqlite3"),}

@@ -1,8 +1,11 @@
 from .base import *  # noqa
 
 import json
+import os
+import sys
 
-with open('/home/lucas/code/vinta/pokebattle/backend/pokebattle/settings/credentials.json') as json_data:
+
+with open(os.path.join(sys.path[0], 'backend/pokebattle/settings/credentials.json'), 'r') as json_data:
     credentials = json.load(json_data)
 
 SECRET_KEY = credentials['password']
