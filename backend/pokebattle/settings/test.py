@@ -1,7 +1,11 @@
 from .base import *  # noqa
 
+import json
 
-SECRET_KEY = "floatyourboat"
+with open('credentials.json') as json_data:
+    credentials = json.load(json_data)
+
+SECRET_KEY = credentials['password']
 
 DATABASES = {
     "default": {"ENGINE": "django.db.backends.sqlite3", "NAME": base_dir_join("db.sqlite3"),}
